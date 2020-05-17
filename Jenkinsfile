@@ -11,7 +11,7 @@ pipeline {
       parallel {
         stage('step2') {
           steps {
-            build 'job-test1', parameters: [string( name: 'NODE', value: 'master')]
+            build 'job-test1', parameters: [[$class: LabelParameterValue,name: 'NODE',label:'master']]
             
           }
         }
