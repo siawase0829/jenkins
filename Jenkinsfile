@@ -7,16 +7,16 @@ pipeline {
       }
     }
 
-    stage('step2') {
+    stage('平行動作') {
       parallel {
-        stage('step2') {
+        stage('step１') {
           steps {
             build job:'job-test1', parameters: [[$class: 'LabelParameterValue',name: 'NODE',label:'master']]
             
           }
         }
 
-        stage('step3') {
+        stage('step２') {
           steps {
             sh '''echo "Hello world"
 echo "Hello world2"
