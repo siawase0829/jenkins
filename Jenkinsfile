@@ -11,7 +11,7 @@ pipeline {
       parallel {
         stage('step2') {
           steps {
-            build 'job-test1'
+            build 'job-test1', parameters: [string( name: 'NODE', value: 'master')]
             
           }
         }
