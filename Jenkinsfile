@@ -12,7 +12,7 @@ pipeline {
         stage('step2') {
           steps {
             build 'job-test1'
-            sleep 1
+            
           }
         }
 
