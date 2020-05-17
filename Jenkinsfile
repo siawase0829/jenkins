@@ -20,6 +20,7 @@ pipeline {
           steps {
             sh '''echo "Hello world"
 echo "Hello world2"
+pwd
 ls -al'''
           }
         }
